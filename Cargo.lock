@@ -1,0 +1,23 @@
+[root]
+name = "zomg"
+version = "0.1.0"
+dependencies = [
+ "rocksdb 0.4.1 (registry+https://github.com/rust-lang/crates.io-index)",
+]
+
+[[package]]
+name = "libc"
+version = "0.2.17"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+
+[[package]]
+name = "rocksdb"
+version = "0.4.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+dependencies = [
+ "libc 0.2.17 (registry+https://github.com/rust-lang/crates.io-index)",
+]
+
+[metadata]
+"checksum libc 0.2.17 (registry+https://github.com/rust-lang/crates.io-index)" = "044d1360593a78f5c8e5e710beccdc24ab71d1f01bc19a29bcacdba22e8475d8"
+"checksum rocksdb 0.4.1 (registry+https://github.com/rust-lang/crates.io-index)" = "5656ce0eccb74b2cf2067140ab02d76f7b2e0eb2e2307057f67596791544aaed"

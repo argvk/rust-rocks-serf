@@ -1,0 +1,7 @@
+[package]
+name = "zomg"
+version = "0.1.0"
+authors = ["karthik <krthkv26@gmail.com>"]
+
+[dependencies]
+rocksdb = "0.4.1"
