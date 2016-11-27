@@ -1,14 +1,14 @@
 mod store;
+extern crate rocksdb;
 
 fn main() {
 
-    let mut db = DB::open_default("storage").unwrap();
-    db.put(b"my key", b"my value");
-    match db.get(b"my key") {
-        Ok(Some(value)) => println!("retrieved value {}", value.to_utf8().unwrap()),
-        Ok(None) => println!("value not found"),
-        Err(e) => println!("operational problem encountered: {}", e),
+    let k = "bazinga";
+    let v = "bv";
+    store::put(k, v);
+    match store::get(k) {
+        Ok(val) => println!("got {}", val),
+        Err(e) => println!("error {}", e),
     }
-
-    db.delete(b"my key");
+    store::delete(k);
 }
