@@ -8,10 +8,20 @@ fn main() {
     let v = "bv";
     let node = hash::rendezvous(vec!["10.0.0.20", "10.0.2.1"], k);
     println!("must be in {}", node);
-    store::put(k, v);
+    match store::put(k, v) {
+        Ok(_) => println!("added {}=>{}", k, v),
+        Err(e) => println!("error {}", e),
+    }
     match store::get(k) {
         Ok(val) => println!("got {}", val),
         Err(e) => println!("error {}", e),
     }
-    store::delete(k);
+    match store::delete(k) {
+        Ok(_) => println!("deleted {}", k),
+        Err(e) => println!("error {}", e),
+    }
+    match store::get(k) {
+        Ok(val) => println!("got {}", val),
+        Err(e) => println!("error {}", e),
+    }
 }

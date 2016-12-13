@@ -1,23 +1,22 @@
 extern crate md5;
 extern crate byteorder;
 
-use std::io::Cursor;
-use self::byteorder::{BigEndian, ReadBytesExt, ByteOrder};
+use self::byteorder::{BigEndian, ByteOrder};
 
 pub fn rendezvous(nodes: Vec<&str>, key: &str) -> String {
-    let mut nodeIn = nodes[0];
-    let mut maxVal = 0;
+    let mut node_in = nodes[0];
+    let mut max_val = 0;
     for node in &nodes {
         let dig = md5::compute(format!("{}{}",node, key).as_bytes());
-        let digLong = BigEndian::read_i32(&dig[..]).abs();
+        let dig_long = BigEndian::read_i32(&dig[..]).abs();
 
-        if digLong > maxVal {
-            nodeIn = node.clone();
-            maxVal = digLong.clone();
+        if dig_long > max_val {
+            node_in = node.clone();
+            max_val = dig_long.clone();
         }
 
-        print!("dig {} ", digLong);
+        print!("dig {} ", dig_long);
         println!("node : {}, str: {}", node, key);
     }
-    nodeIn.to_string()
+    node_in.to_string()
 }
