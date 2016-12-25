@@ -4,6 +4,7 @@ version = "0.1.0"
 dependencies = [
  "byteorder 0.5.3 (registry+https://github.com/rust-lang/crates.io-index)",
  "md5 0.2.1 (registry+https://github.com/rust-lang/crates.io-index)",
+ "mpack 0.1.2 (registry+https://github.com/rust-lang/crates.io-index)",
  "rocksdb 0.5.0 (registry+https://github.com/rust-lang/crates.io-index)",
 ]
 
@@ -54,6 +55,11 @@ version = "0.2.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 
 [[package]]
+name = "mpack"
+version = "0.1.2"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+
+[[package]]
 name = "num_cpus"
 version = "1.1.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -97,6 +103,7 @@ dependencies = [
 "checksum librocksdb-sys 0.4.0 (registry+https://github.com/rust-lang/crates.io-index)" = "5f11cd077382d841b6639901774bee35909d44bfdf2608a730077201f67db519"
 "checksum make-cmd 0.1.0 (registry+https://github.com/rust-lang/crates.io-index)" = "a8ca8afbe8af1785e09636acb5a41e08a765f5f0340568716c18a8700ba3c0d3"
 "checksum md5 0.2.1 (registry+https://github.com/rust-lang/crates.io-index)" = "7df230903ccdffd6b3b4ec21624498ea64c912ce50297846907f0b8e1bb249dd"
+"checksum mpack 0.1.2 (registry+https://github.com/rust-lang/crates.io-index)" = "e64838c9b627d0ff437188c2c0a355486631761ecdedbd4a18fa8c721cd7adb4"
 "checksum num_cpus 1.1.0 (registry+https://github.com/rust-lang/crates.io-index)" = "8890e6084723d57d0df8d2720b0d60c6ee67d6c93e7169630e4371e88765dcad"
 "checksum rand 0.3.14 (registry+https://github.com/rust-lang/crates.io-index)" = "2791d88c6defac799c3f20d74f094ca33b9332612d9aef9078519c82e4fe04a5"
 "checksum rayon 0.4.3 (registry+https://github.com/rust-lang/crates.io-index)" = "0f0783f5880c56f5a308e219ac9309dbe781e064741dd5def4c617c440890305"

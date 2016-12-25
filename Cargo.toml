@@ -7,3 +7,4 @@ authors = ["karthik <krthkv26@gmail.com>"]
 rocksdb = "0.5.0"
 md5 = "0.2.1"
 byteorder = "0.5.3"
+mpack = "0.1.2"
